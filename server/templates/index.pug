@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/style.css")
+        link(href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+            rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css")
+    body
+        header.header
+            div.header__links
+                a.header__test-link(href="https://app.startexam.com/SignIn")
+                    span.header__test-text Тест
+                a.header__test-link(href="/study")
+                    span.header__test-text Обучение
+            a.header__link-logo(href="/")
+                img.header__logo(src="/public/image/logo-spk-model.png")
+            a.header__account-link(href="/login")
+                div.header__account-block
+                    svg.header__account-image(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z" fill="currentColor")
+                        path(d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z" fill="currentColor")
+                    span.header__account-text Войти
+        main.main-index
+        script(src="/public/js/index-page.js")

@@ -1,0 +1,39 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/style.css")
+        link(href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet")
+    body
+        header.header
+            a.header__test-link(href="https://app.startexam.com/SignIn")
+                span.header__test-text Тест
+            a.header__link-logo(href="/")
+                img.header__logo(src="/public/image/logo-spk-model.png")
+            a.header__test-link(href="/study")
+                span.header__test-text Обучение
+        main.main-account
+            h1.main-account__caption Регистрация
+            form.form-account#registration(method="post")
+                label.form-account__label-login.form__label
+                    span.form-account__text-login.form__text Логин
+                    input.form-account__input-login.form__input(type="text" name="username" required)
+                label.form-account__label-email.form__label
+                    span.form-account__text-email.form__text Почта
+                    input.form-account__input-email.form__input(type="email" name="email" required)
+                label.form-account__label-name.form__label
+                    span.form-account__text-name.form__text Имя
+                    input.form-account__input-name.form__input(type="text" name="name" required)
+                label.form-account__label-surname.form__label
+                    span.form-account__text-surname.form__text Фамилия
+                    input.form-account__input-surname.form__input(type="text" name="surname" required)
+                label.form-account__label-password.form__label
+                    span.form-account__text-password.form__text Пароль
+                    input.form-account__input-password.form__input(type="password" name="password" required)
+                label.form-account__label-password-repeat.form__label
+                    span.form-account__text-password-repeat.form__text Повторите пароль
+                    input.form-account__input-password-repeat.form__input(type="password")
+                input.form-account__button.form__button(type="submit" value="Зарегистрироваться")
+            a.main-account__link-login(href="/login") Вы уже зарегистрированы? Войти
+        script(src="/public/js/form-registration.js")

@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $main-color;
+  padding: 50px 100px 0 100px;
+  box-sizing: border-box;
+  font-size: 20px;
+
+  &__logo {
+    height: 80px;
+    color: black;
+  }
+
+  &__account-block {
+    display: flex;
+    align-items: center;
+    gap:10px
+  }
+
+  &__test-link {
+    width: 90px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90px;
+  }
+
+  &--disable{
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    padding: 0 5px;
+    box-sizing: border-box;
+
+    &__logo {
+      width: 160px;
+    }
+  }
+}

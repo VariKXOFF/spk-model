@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/style.css")
+        link(href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet")
+        script(src="/public/js/form-course.js")
+    body
+        header.header
+            a.header__test-link(href="https://app.startexam.com/SignIn")
+                span.header__test-text Тест
+            a.header__link-logo(href="/")
+                img.header__logo(src="/public/image/logo-spk-model.png")
+            a.header__account-link(href="/login")
+                div.header__account-block
+                    svg.header__account-image(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7ZM14 7C14 8.10457 13.1046 9 12 9C10.8954 9 10 8.10457 10 7C10 5.89543 10.8954 5 12 5C13.1046 5 14 5.89543 14 7Z" fill="currentColor")
+                        path(d="M16 15C16 14.4477 15.5523 14 15 14H9C8.44772 14 8 14.4477 8 15V21H6V15C6 13.3431 7.34315 12 9 12H15C16.6569 12 18 13.3431 18 15V21H16V15Z" fill="currentColor")
+                    span.header__account-text Войти
+        main.main-study
+            a.course.course-form
+                div.course__generate
+                    svg.course__add-image(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" fill="currentColor")
+                        path(fill-rule="evenodd" clip-rule="evenodd" d="M13 7C13 6.44772 12.5523 6 12 6C11.4477 6 11 6.44772 11 7V11H7C6.44772 11 6 11.4477 6 12C6 12.5523 6.44772 13 7 13H11V17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17V13H17C17.5523 13 18 12.5523 18 12C18 11.4477 17.5523 11 17 11H13V7Z" fill="currentColor")
+        form.form-generate#form_add_course(method="post")
+            div.form-generate__block
+                svg.form-generate__close(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M6.2253 4.81108C5.83477 4.42056 5.20161 4.42056 4.81108 4.81108C4.42056 5.20161 4.42056 5.83477 4.81108 6.2253L10.5858 12L4.81114 17.7747C4.42062 18.1652 4.42062 18.7984 4.81114 19.1889C5.20167 19.5794 5.83483 19.5794 6.22535 19.1889L12 13.4142L17.7747 19.1889C18.1652 19.5794 18.7984 19.5794 19.1889 19.1889C19.5794 18.7984 19.5794 18.1652 19.1889 17.7747L13.4142 12L19.189 6.2253C19.5795 5.83477 19.5795 5.20161 19.189 4.81108C18.7985 4.42056 18.1653 4.42056 17.7748 4.81108L12 10.5858L6.2253 4.81108Z" fill="currentColor")
+                label.form-generate__label-course.form__label
+                    span.form-generate__text-course.form__text Название курса
+                    input.form-generate__input-course.form__input(type="text" name="name" required)
+                label.form-generate__label-course-price.form__label
+                    span.form-generate__text-course-price.form__text Цена курса
+                    input.form-generate__input-course-price.form__input(type="number" name="price" min="0" value="0" required)
+                label.form-generate__label-course-text.form__label.form__label--textarea
+                    span.form-generate__text-course-text.form__text Наполнение курса
+                    textarea.form-generate__textarea-course-text.form__textarea(name="text" required)
+                input.form-generate__button.form__button(type="submit" value="Добавить")

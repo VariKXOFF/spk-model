@@ -1,0 +1,22 @@
+{
+  "name": "spk-model",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.13",
+    "pug": "^3.0.2",
+    "sass": "^1.43.2",
+    "tiny-slider": "^2.9.3"
+  }
+}

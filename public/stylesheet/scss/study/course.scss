@@ -1,0 +1,47 @@
+.course {
+  height: 150px;
+  transition: 1s;
+  border-radius: 14px;
+
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  &__image {
+    height: inherit;
+    background: url("/public/image/image-for-study.png") center;
+    background-size: cover;
+    border-radius: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 130px;
+    gap: 5px;
+  }
+
+  &__generate {
+    border: 2px dashed gray;
+    border-radius: 14px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__add-image {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media (max-width: $mobile-width) {
+  .course {
+    max-width: 300px;
+  }
+}

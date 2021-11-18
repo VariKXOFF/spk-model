@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="/style.css")
+        link(href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet")
+    body
+        header.header
+            a.header__test-link(href="https://app.startexam.com/SignIn")
+                span.header__test-text Тест
+            a.header__link-logo(href="/")
+                img.header__logo(src="/public/image/logo-spk-model.png")
+            a.header__test-link(href="/study")
+                span.header__test-text Обучение
+        main.main-account
+            h1.main-account__caption Войти
+            form.form-account#login(method="post")
+                label.form-account__label-name.form__label
+                    span.form-account__text-name.form__text Логин
+                    input.form-account__input-name.form__input(type="text" name="username" required)
+                label.form-account__label-name.form__label
+                    span.form-account__text-name.form__text Пароль
+                    input.form-account__input-name.form__input(type="password" name="password" required)
+                input.form-account__button.form__button(type="submit" value="Войти")
+            a.main-account-link-registration(href="/registration") Вы еще не зарегистрированы? Зарегистрироваться
+        script(src="/public/js/form-login.js")
